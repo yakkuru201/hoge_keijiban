@@ -22,6 +22,9 @@ class BoardsController < ApplicationController
   end
 
   def update
+    @board = Board.find(params[:id])
+    @board.update_attributes(params[:board])
+    redirect_to board_path(@board)
   end
 
   def destroy
