@@ -8,7 +8,9 @@ class BoardsController < ApplicationController
   end
 
   def create
-    @board = Board.new params[:id]
+    # raise
+    @board = Board.new params[:board]
+    # @board = Board.new({name: "dfghj"})
     @board.save
     redirect_to board_path(@board)
   end
