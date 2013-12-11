@@ -13,7 +13,7 @@ class BoardsController < ApplicationController
     redirect_to board_path(@board)
   end
 
-  def 
+  def show
     @board = Board.find(params[:id])
   end
 
