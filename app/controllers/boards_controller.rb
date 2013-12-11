@@ -8,6 +8,9 @@ class BoardsController < ApplicationController
   end
 
   def create
+    @board = Board.new params[:id]
+    @board.save
+    redirect_to board_path(@board)
   end
 
   def show
